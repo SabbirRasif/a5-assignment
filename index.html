@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Manrope:wght@200..800&display=swap' id="font");
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -39,19 +40,19 @@
       <div class="flex items-center gap-4">
         <div class="flex items-center gap-2">
           <button id="navHeartBtn" class="btn btn-ghost btn-sm gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9-6.9C-1.6 9.55 6.5 4 12 9c5.5-5 13.6.55 9 5.1C19 16.65 12 21 12 21z"/></svg>
+            <img src="./assets/heart.png" class="w-10 h-10 rounded-md bg-rose-50 flex items-center justify-center" alt="">
             <span id="heartCount">0</span>
           </button>
         </div>
 
         <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a1 1 0 011 1v2.07A7 7 0 0120 12v6a2 2 0 01-2 2h-3v-6H9v6H6a2 2 0 01-2-2v-6a7 7 0 017-7.93V3a1 1 0 011-1z"/></svg>
+          <img src="./assets/coin.png" class="w-10 h-10 rounded-md bg-rose-50 flex items-center justify-center" alt="">
           <span class="text-sm">Coins:</span>
           <span id="coinCount" class="font-semibold">100</span>
         </div>
 
         <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-sky-500" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v2H3zM3 7h18v2H3zM3 11h18v8H3z"/></svg>
+          <i class="fa-solid fa-copy"></i>
           <span class="text-sm">Copied:</span>
           <span id="copyCount" class="font-semibold">0</span>
         </div>
@@ -60,7 +61,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="bg-gradient-to-b from-emerald-950 to-emerald-600 text-white py-15" style="font-family: 'Hind Siliguri', sans-serif;">
     <div class="container mx-auto text-center px-4" style="font-family: 'Hind Siliguri', sans-serif;">
       <div class="mx-auto w-24 h-24 rounded-full bg-white flex items-center justify-center mb-4">
@@ -71,18 +71,15 @@
     </div>
   </section>
 
-  <main class="container mx-auto px-4 -mt-8 mb-12 ">
+  <main class="container mx-auto px-4 -mt-8 mb-12  ">
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
-      <!-- Cards area (3 cols wide on large) -->
-      <section class="lg:col-span-3 bg-white p-4 rounded-lg shadow-inner border border-emerald-100">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <!-- Card template start -->
-
+      <section class="lg:col-span-3 bg-white p-4 rounded-lg shadow-inner border border-emerald-100" style="font-family: 'Hind Siliguri', sans-serif; background-color: rgb(234, 248, 248);">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" >
           <!-- Card 1 -->
           <article class="p-4 bg-white rounded-lg shadow-md flex flex-col h-full" data-name="জাতীয় জরুরি সেবা" data-eng="National Emergency" data-number="999">
             <div class="flex items-left justify-between">
               <div class="flex items-left gap-3">
-                <div class="w-10 h-10 rounded-md bg-rose-50 flex items-center justify-center">🚨</div>
+                <div class="w-10 h-10 rounded-md bg-rose-50 flex items-center justify-center"><img src="./assets/emergency.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
@@ -96,229 +93,231 @@
               
             </div>
 
-            <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
-              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>
+            <div class="mt-auto flex gap-2" style="font-family: 'Hind Siliguri', sans-serif;">
+              <button class="copy-btn btn btn-sm flex-1 rounded-lg border-2" aria-label="Copy number"> <i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 rounded-lg border-none hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
           <!-- Card 2 -->
-          <article class="p-4 bg-white rounded-lg shadow-sm border flex flex-col h-full" data-name="পুলিশ" data-eng="Police" data-number="999">
-            <div class="flex items-start justify-between">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-md bg-sky-50 flex items-center justify-center">👮</div>
+          <article class="p-4 bg-white rounded-lg shadow-sm  flex flex-col h-full" data-name="পুলিশ" data-eng="Police" data-number="999">
+            <div class="flex items-left justify-between">
+              <div class="flex items-left gap-3">
+                <div class="w-10 h-10 rounded-md bg-sky-50 flex items-center justify-center"><img src="./assets/police.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
 
-            <div class="mt-4 text-center">
-              <div class="text-3xl font-bold">999</div>
-              <div class="mt-2"><span class="badge">পুলিশ</span></div>
-
+            <div class="mt-4 text-left">
               <div class="mt-3 font-medium text-lg">পুলিশ</div>
               <div class="text-xs text-gray-400">Police</div>
+              <div class="text-3xl font-bold">999</div>
+              <div class="mt-2"><span class="badge text-xs text-gray-600">পুলিশ</span></div>
+
+
             </div>
 
             <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
-              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>
+              <button class="copy-btn btn btn-sm flex-1 rounded-lg border-2 " aria-label="Copy number"><i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 rounded-lg border-none hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
           <!-- Card 3 -->
-          <article class="p-4 bg-white rounded-lg shadow-sm border flex flex-col h-full" data-name="অগ্নি সেবা" data-eng="Fire Service" data-number="999">
+          <article class="p-4 bg-white rounded-lg shadow-sm  flex flex-col h-full" data-name="অগ্নি সেবা" data-eng="Fire Service" data-number="999">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-md bg-orange-50 flex items-center justify-center">🔥</div>
+                <div class="w-10 h-10 rounded-md bg-orange-50 flex items-center justify-center"><img src="./assets/fire-service.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
 
-            <div class="mt-4 text-center">
-              <div class="text-3xl font-bold">999</div>
-              <div class="mt-2"><span class="badge">ফায়ার</span></div>
-
-              <div class="mt-3 font-medium text-lg">অগ্নি সেবা</div>
+            <div class="mt-4 text-left">
+             <div class="mt-3 font-medium text-lg">ফায়ার সার্ভিস</div>
               <div class="text-xs text-gray-400">Fire Service</div>
+              <div class="text-3xl font-bold">999</div>
+              <div class="mt-2"><span class="badge text-xs text-gray-600">ফায়ার</span></div>
+
+
             </div>
 
             <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
-              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>
+              <button class="copy-btn btn btn-sm flex-1 rounded-lg border-2" aria-label="Copy number"> <i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 rounded-lg border-none hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
           <!-- Card 4 -->
-          <article class="p-4 bg-white rounded-lg shadow-sm border flex flex-col h-full" data-name="অ্যাম্বুলেন্স" data-eng="Ambulance" data-number="1994-9999999">
+          <article class="p-4 bg-white rounded-lg shadow-sm  flex flex-col h-full" data-name="অ্যাম্বুলেন্স" data-eng="Ambulance" data-number="1994-9999999">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-md bg-pink-50 flex items-center justify-center">🚑</div>
+                <div class="w-10 h-10 rounded-md bg-pink-50 flex items-center justify-center"><img src="./assets/ambulance.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
 
-            <div class="mt-4 text-center">
-              <div class="text-3xl font-bold">1994-9999999</div>
-              <div class="mt-2"><span class="badge">অ্যাম্বুলেন্স</span></div>
-
-              <div class="mt-3 font-medium text-lg">অ্যাম্বুলেন্স</div>
+            <div class="mt-4 text-left">
+             <div class="mt-3 font-medium text-lg">অ্যাম্বুলেন্স</div>
               <div class="text-xs text-gray-400">Ambulance</div>
+              <div class="text-3xl font-bold">1994-999999</div>
+              <div class="mt-2"><span class="badge text-xs text-gray-600 ">স্বাস্থ্য</span></div>
+
+
             </div>
 
             <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
-              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>/button>
+              <button class="copy-btn btn btn-sm flex-1 rounded-lg border-2 " aria-label="Copy number"><i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 rounded-lg border-none hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
           <!-- Card 5 -->
-          <article class="p-4 bg-white rounded-lg shadow-sm border flex flex-col h-full" data-name="নারী ও শিশু সুরক্ষা" data-eng="Women & Child Helpline" data-number="109">
+          <article class="p-4 bg-white rounded-lg shadow-sm  flex flex-col h-full" data-name="নারী ও শিশু সুরক্ষা" data-eng="Women & Child Helpline" data-number="109">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-md bg-rose-50 flex items-center justify-center">👩‍👧</div>
+                <div class="w-10 h-10 rounded-md bg-rose-50 flex items-center justify-center"><img src="./assets/emergency.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
 
-            <div class="mt-4 text-center">
-              <div class="text-3xl font-bold">109</div>
-              <div class="mt-2"><span class="badge">হেল্পলাইন</span></div>
-
-              <div class="mt-3 font-medium text-lg">নারী ও শিশু সুরক্ষা</div>
+            <div class="mt-4 text-left">
+              <div class="mt-3 font-medium text-lg">নারী ও শিশু সহায়তা</div>
               <div class="text-xs text-gray-400">Women & Child Helpline</div>
+              <div class="text-3xl font-bold">109</div>
+              <div class="mt-2"><span class="badge">সহায়তা</span></div>
             </div>
 
             <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
+              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"><i class="fa-solid fa-copy"></i> Copy</button>
               <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
           <!-- Card 6 -->
-          <article class="p-4 bg-white rounded-lg shadow-sm border flex flex-col h-full" data-name="দুর্নীতি প্রতিরোধ" data-eng="Anti-Corruption" data-number="106">
+          <article class="p-4 bg-white rounded-lg shadow-sm  flex flex-col h-full" data-name="দুর্নীতি প্রতিরোধ" data-eng="Anti-Corruption" data-number="106">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-md bg-amber-50 flex items-center justify-center">⚖️</div>
+                <div class="w-10 h-10 rounded-md bg-amber-50 flex items-center justify-center"><img src="./assets/emergency.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
 
-            <div class="mt-4 text-center">
-              <div class="text-3xl font-bold">106</div>
-              <div class="mt-2"><span class="badge">ডিজিটাল</span></div>
-
-              <div class="mt-3 font-medium text-lg">দুর্নীতি প্রতিরোধ</div>
+            <div class="mt-4 text-left">
+              <div class="mt-3 font-medium text-lg">দুদক</div>
               <div class="text-xs text-gray-400">Anti-Corruption</div>
+              <div class="text-3xl font-bold">106</div>
+              <div class="mt-2"><span class="badge text-xs text-gray-600">সরকারি </span></div>
+
+
             </div>
 
             <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
-              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>
+              <button class="copy-btn btn btn-sm flex-1 rounded-lg border-2" aria-label="Copy number"><i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 rounded-lg border-none hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
           <!-- Card 7 -->
-          <article class="p-4 bg-white rounded-lg shadow-sm border flex flex-col h-full" data-name="বিদ্যুৎ বিঘ্নতা" data-eng="Electricity Outage" data-number="16216">
+          <article class="p-4 bg-white rounded-lg shadow-sm  flex flex-col h-full" data-name="বিদ্যুৎ বিঘ্নতা" data-eng="Electricity Outage" data-number="16216">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-md bg-violet-50 flex items-center justify-center">💡</div>
+                <div class="w-10 h-10 rounded-md bg-violet-50 flex items-center justify-center"><img src="./assets/emergency.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
 
-            <div class="mt-4 text-center">
-              <div class="text-3xl font-bold">16216</div>
-              <div class="mt-2"><span class="badge">বিদ্যুৎ</span></div>
-
-              <div class="mt-3 font-medium text-lg">বিদ্যুৎ বিঘ্নতা</div>
+            <div class="mt-4 text-left">
+              <div class="mt-3 font-medium text-lg">বিদ্যুৎ বিভ্রাট</div>
               <div class="text-xs text-gray-400">Electricity Outage</div>
+              <div class="text-3xl font-bold">16216</div>
+              <div class="mt-2"><span class="badge text-xs text-gray-600">বিদ্যুৎ</span></div>
+
+
             </div>
 
             <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
-              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>
+              <button class="copy-btn btn btn-sm flex-1 rounded-lg border-2" aria-label="Copy number"><i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 rounded-lg border-none hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
           <!-- Card 8 -->
-          <article class="p-4 bg-white rounded-lg shadow-sm border flex flex-col h-full" data-name="ব্র্যাক" data-eng="BRAC" data-number="16445">
+          <article class="p-4 bg-white rounded-lg shadow-sm  flex flex-col h-full" data-name="ব্র্যাক" data-eng="BRAC" data-number="16445">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-md bg-emerald-50 flex items-center justify-center">🏢</div>
+                <div class="w-10 h-10 rounded-md bg-emerald-50 flex items-center justify-center"><img src="./assets/emergency.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
 
-            <div class="mt-4 text-center">
-              <div class="text-3xl font-bold">16445</div>
-              <div class="mt-2"><span class="badge">ব্র্যাক</span></div>
-
+            <div class="mt-4 text-left">
               <div class="mt-3 font-medium text-lg">ব্র্যাক</div>
               <div class="text-xs text-gray-400">BRAC</div>
+              <div class="text-3xl font-bold">16445</div>
+              <div class="mt-2"><span class="badge text-xs text-gray-600">এনজিও</span></div>
+e
+
             </div>
 
             <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
-              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>
+              <button class="copy-btn btn btn-sm flex-1 rounded-lg border-2" aria-label="Copy number"><i class="fa-solid fa-copy"></i> Copy</button>
+              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 rounded-lg border-none hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
           <!-- Card 9 -->
-          <article class="p-4 bg-white rounded-lg shadow-sm border flex flex-col h-full" data-name="বাংলাদেশ রেলওয়ে" data-eng="Bangladesh Railway" data-number="163">
+          <article class="p-4 bg-white rounded-lg shadow-sm  flex flex-col h-full" data-name="বাংলাদেশ রেলওয়ে" data-eng="Bangladesh Railway" data-number="163">
             <div class="flex items-start justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-md bg-cyan-50 flex items-center justify-center">🚆</div>
+                <div class="w-10 h-10 rounded-md bg-cyan-50 flex items-center justify-center"><img src="./assets/emergency.png" alt=""></div>
               </div>
               <div class="card-heart text-2xl" title="প্রিয় করুন">💗</div>
             </div>
 
-            <div class="mt-4 text-center">
-              <div class="text-3xl font-bold">163</div>
-              <div class="mt-2"><span class="badge">রেলওয়ে</span></div>
-
+            <div class="mt-4 text-left">
               <div class="mt-3 font-medium text-lg">বাংলাদেশ রেলওয়ে</div>
               <div class="text-xs text-gray-400">Bangladesh Railway</div>
+              <div class="text-3xl font-bold">163</div>
+              <div class="mt-2"><span class="badge text-xs text-gray-600">পরিবহন</span></div>
+
+
             </div>
 
             <div class="mt-auto flex gap-2">
-              <button class="copy-btn btn btn-sm flex-1" aria-label="Copy number"> Copy</button>
-              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 hover:bg-black " aria-label="Call service">📞 Call</button>
+              <button class="copy-btn btn btn-sm flex-1 rounded-lg border-2  " aria-label="Copy number"> Copy</button>
+              <button class="call-btn btn btn-primary btn-sm flex-1 bg-green-500 rounded-lg border-none hover:bg-black " aria-label="Call service">📞 Call</button>
             </div>
           </article>
 
-          <!-- Card template end -->
+
         </div>
       </section>
 
-      <!-- History section (right column) -->
-      <aside class="bg-white p-4 rounded-lg shadow-md border">
-        <div class="flex items-center justify-between mb-4">
+      <aside class="bg-white p-4 rounded-lg shadow-md ">
+        <div class="flex items-center justify-between mb-4 border-none">
           <div class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14l-4-2-4 2-4-2-4 2V5z"/></svg>
-            <h3 class="font-semibold">Call History</h3>
+ 
+            <h3 class="font-semibold"> <i class="fa-regular fa-clock m-2 items-center"></i>Call History</h3>
           </div>
           <button id="clearHistory" class="btn btn-sm btn-outline">Clear</button>
         </div>
 
         <div id="historyList" class="space-y-3 text-sm">
-          <!-- dynamic history items will appear here -->
+
           <div class="text-gray-400">কোনো কল ইতিহাস নেই</div>
         </div>
       </aside>
     </div>
   </main>
 
-  <!-- Footer small note -->
   <footer class="container mx-auto px-4 text-xs text-gray-500 pb-8">
     <div>Built By Sabbir Rasif</div>
   </footer>
 
-  <!-- SCRIPT -->
   <script>
-    // state
+
     const state = { hearts: 0, coins: 100, copies: 0, history: [] };
 
-    // elements
     const heartCountEl = document.getElementById('heartCount');
     const coinCountEl = document.getElementById('coinCount');
     const copyCountEl = document.getElementById('copyCount');
@@ -348,8 +347,6 @@
         historyListEl.appendChild(div);
       });
     }
-
-    // heart clicks (simple increment)
     document.querySelectorAll('.card-heart').forEach(el => {
       el.addEventListener('click', () => {
         state.hearts += 1;
@@ -359,25 +356,23 @@
       });
     });
 
-    // copy buttons with robust fallback
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', async (e) => {
         const card = btn.closest('article');
         const number = card?.dataset?.number ?? '';
         let copied = false;
 
-        // First try modern clipboard API (may be blocked by embedding context)
         if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
           try {
             await navigator.clipboard.writeText(number);
             copied = true;
           } catch (err) {
-            // often fails in sandboxed iframes or blocked contexts -- fallback below
+
             console.warn('navigator.clipboard.writeText failed, will try legacy fallback:', err);
           }
         }
 
-        // Legacy fallback using execCommand
+
         if (!copied) {
           try {
             const ta = document.createElement('textarea');
@@ -402,13 +397,12 @@
           renderState();
           alert(`কপি করা হয়েছে: ${number}`);
         } else {
-          // Provide a clear message so the user knows why it failed and what to do
+
           alert('কপি করতে ব্যর্থ হয়েছে — আপনার পরিবেশ ক্লিপবোর্ড অ্যাক্সেস অনুমোদন করে না। অনুগ্রহ করে ম্যানুয়ালি নম্বরটি সিলেক্ট করে কপি করুন।');
         }
       });
     });
 
-    // call buttons
     document.querySelectorAll('.call-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const card = btn.closest('article');
@@ -421,7 +415,6 @@
           return;
         }
 
-        // deduct coins
         state.coins -= 20;
         renderState();
 
@@ -444,14 +437,8 @@
         renderState();
       });
     }
-
-    // initial render
     renderState();
 
-    // responsive hook (optional)
-    function handleResize() {
-      // left empty intentionally; layout is handled by Tailwind grid
-    }
     window.addEventListener('resize', handleResize);
   </script>
 </body>
